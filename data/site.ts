@@ -1,115 +1,105 @@
-import { BedDouble, Car, Clock, Coffee, Dumbbell, Headphones, KeyRound, MapPin, Palmtree, Sparkles, Utensils, Waves, Wifi } from "lucide-react";
+import { Clock, Droplets, Gem, Heart, Palette, Paintbrush, Scissors, Sparkles, Star, Wand2, Flower2, CircleDot } from "lucide-react";
 
 export const siteConfig = {
-  name: "Alto Cali Hotel Boutique",
-  description: "Hotel boutique premium en Cali, Colombia. Elegancia, confort y vistas inolvidables.",
-  url: "https://alto-cali.vercel.app",
-  address: "Cl 73 # 3-76, Jorge Eliecer Gaitan, Cali, Valle del Cauca",
-  phone: "+57 300 000 0000",
-  email: "reservas@altocali.com",
+  name: "La Casa Rosa - Spa de Uñas",
+  description: "Spa de uñas boutique en Cali. Manicura, pedicura, soft gel, uñas acrílicas y nail art con estilo y elegancia.",
+  url: "https://lacasarosa-spa.vercel.app",
+  address: "Cra. 84 #54, Cali, Valle del Cauca",
+  phone: "+57 314 674 1901",
+  email: "info@lacasarosaspa.com",
   socials: ["Instagram", "Facebook", "TikTok"]
 };
 
 export const navLinks = [
   { label: "Inicio", href: "/" },
-  { label: "Habitaciones", href: "/habitaciones" },
   { label: "Servicios", href: "/servicios" },
-  { label: "Experiencias", href: "/experiencias" },
-  { label: "Galería", href: "/galeria" },
-  { label: "Ubicación", href: "/ubicacion" },
-  { label: "Contacto", href: "/contacto" }
-];
-
-export const homeAnchors = [
-  { label: "Habitaciones", href: "#habitaciones" },
-  { label: "Servicios", href: "#servicios" },
-  { label: "Experiencias", href: "#experiencias" },
-  { label: "Ubicación", href: "#ubicacion" }
-];
-
-export const rooms = [
-  {
-    title: "Habitación estándar",
-    slug: "estandar",
-    price: "Desde $290.000 COP",
-    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=85",
-    description: "Un refugio elegante para viajes ejecutivos o escapadas cortas, con acabados cálidos y descanso superior.",
-    amenities: ["Queen bed", "Smart TV", "WiFi premium", "Baño privado"]
-  },
-  {
-    title: "Superior",
-    slug: "superior",
-    price: "Desde $360.000 COP",
-    image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=85",
-    description: "Más amplitud, mejor iluminación y detalles boutique pensados para una estadía memorable en Cali.",
-    amenities: ["King bed", "Zona lounge", "Café de cortesía", "Vista ciudad"]
-  },
-  {
-    title: "Deluxe",
-    slug: "deluxe",
-    price: "Desde $480.000 COP",
-    image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1200&q=85",
-    description: "Diseño cinematográfico, baño premium y una atmósfera perfecta para desconectar con estilo.",
-    amenities: ["King premium", "Minibar", "Amenities luxury", "Workspace"]
-  },
-  {
-    title: "Suite premium",
-    slug: "suite-premium",
-    price: "Desde $690.000 COP",
-    image: "https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=1200&q=85",
-    description: "La experiencia más exclusiva del hotel: sala privada, vistas privilegiadas y servicio personalizado.",
-    amenities: ["Sala privada", "Bañera", "Vista panorámica", "Concierge"]
-  }
+  { label: "Nail Art", href: "/nail-art" },
+  { label: "Ubicación", href: "/ubicacion" }
 ];
 
 export const services = [
-  { title: "Piscina", description: "Ambiente fresco, íntimo y perfecto para cerrar el día.", icon: Waves },
-  { title: "WiFi", description: "Conectividad estable para trabajo, streaming y reuniones.", icon: Wifi },
-  { title: "Gimnasio", description: "Rutina activa con equipos esenciales y espacio moderno.", icon: Dumbbell },
-  { title: "Desayuno", description: "Sabores locales, café colombiano y presentación boutique.", icon: Coffee },
-  { title: "Parqueadero", description: "Acceso cómodo y seguro para huéspedes.", icon: Car },
-  { title: "Atención 24/7", description: "Equipo atento para ayudarte en cada momento.", icon: Headphones },
-  { title: "Check-in", description: "Proceso ágil, elegante y sin fricción.", icon: KeyRound },
-  { title: "Reservas", description: "Gestión flexible para viajes personales o corporativos.", icon: Clock }
+  {
+    title: "Manicura Clásica",
+    slug: "manicura-clasica",
+    price: "Desde $35.000 COP",
+    image: "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1200&q=85",
+    description: "Un tratamiento completo que incluye limado, cutícula, masaje hidratante y esmalte de tu elección.",
+    amenities: ["Limado", "Cutícula", "Hidratación", "Esmalte"]
+  },
+  {
+    title: "Pedicura Spa",
+    slug: "pedicura-spa",
+    price: "Desde $45.000 COP",
+    image: "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=1200&q=85",
+    description: "Relaja tus pies con exfoliación, mascarilla hidratante, masaje y acabado impecable.",
+    amenities: ["Exfoliación", "Mascarilla", "Masaje", "Esmalte"]
+  },
+  {
+    title: "Soft Gel",
+    slug: "soft-gel",
+    price: "Desde $65.000 COP",
+    image: "https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=1200&q=85",
+    description: "Uñas naturales con acabado en gel semipermanente. Brillo duradero por más de 3 semanas.",
+    amenities: ["Semipermanente", "3+ semanas", "Brillo extra", "Sin daño"]
+  },
+  {
+    title: "Uñas Acrílicas",
+    slug: "acrilicas",
+    price: "Desde $80.000 COP",
+    image: "https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=1200&q=85",
+    description: "Diseño personalizado con acrílico de alta resistencia. Largo, forma y estilo a tu medida.",
+    amenities: ["Personalizado", "Alta resistencia", "Forma libre", "Relleno"]
+  }
+];
+
+export const nailServices = [
+  { title: "Manicura", description: "Cuidado completo para tus manos con acabados impecables.", icon: Sparkles },
+  { title: "Pedicura", description: "Relajación y belleza para tus pies con tratamientos premium.", icon: Flower2 },
+  { title: "Soft Gel", description: "Uñas semipermanentes con brillo duradero y natural.", icon: Droplets },
+  { title: "Acrílicas", description: "Diseños personalizados con la máxima resistencia.", icon: Gem },
+  { title: "Nail Art", description: "Arte y creatividad en cada uña con detalles únicos.", icon: Palette },
+  { title: "Esmaltado", description: "Esmalte tradicional o semipermanente en tonos temporada.", icon: Paintbrush },
+  { title: "Relleno", description: "Mantenimiento para mantener tus uñas siempre perfectas.", icon: CircleDot },
+  { title: "Retiro", description: "Retiro seguro y profesional de gel o acrílico sin daño.", icon: Scissors }
 ];
 
 export const experiences = [
   {
-    title: "Rooftop entre luces de Cali",
-    image: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1200&q=85",
-    description: "Cócteles, conversación y una vista nocturna diseñada para recordar."
+    title: "Nail Art Floral",
+    image: "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1200&q=85",
+    description: "Diseños florales delicados que aportan elegancia a cada dedo."
   },
   {
-    title: "Piscina boutique",
-    image: "https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?auto=format&fit=crop&w=1200&q=85",
-    description: "Un espacio íntimo con iluminación cálida, calma y diseño contemporáneo."
+    title: "French Moderno",
+    image: "https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=1200&q=85",
+    description: "La clásica francesa reinventada con líneas modernas y toques de color."
   },
   {
-    title: "Cali gastronómica",
-    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=85",
-    description: "Restaurante de autor con ingredientes locales y servicio premium."
+    title: "Geometría & Líneas",
+    image: "https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=1200&q=85",
+    description: "Formas geométricas minimalistas para un look contemporáneo y sofisticado."
   },
   {
-    title: "Ciudad, salsa y cultura",
-    image: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1200&q=85",
-    description: "Experiencias curadas para descubrir el alma vibrante de Cali."
+    title: "Glitter & Brillo",
+    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=85",
+    description: "Destellos y brillos para ocasiones especiales y momentos únicos."
   }
 ];
 
 export const gallery = [
-  "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=85",
-  "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=900&q=85",
-  "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=900&q=85",
-  "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=900&q=85",
-  "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=900&q=85",
-  "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=900&q=85",
-  "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=900&q=85",
-  "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=900&q=85"
+  "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=85",
+  "https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=900&q=85",
+  "https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=900&q=85",
+  "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=900&q=85",
+  "https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=900&q=85",
+  "https://images.unsplash.com/photo-1457972729786-0411a3b2b626?auto=format&fit=crop&w=900&q=85",
+  "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=85",
+  "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=85"
 ];
 
-export const highlights = [ //Esto hay que quitarlo
-  { label: "Suites", value: "24" },
-  { label: "Servicio", value: "24/7" },
+export const highlights = [
+  { label: "Servicios", value: "12+" },
+  { label: "Clientes felices", value: "2K+" },
   { label: "Rating", value: "4.9" },
-  { label: "Cali", value: "360°" }
+  { label: "Años", value: "5+" }
 ];

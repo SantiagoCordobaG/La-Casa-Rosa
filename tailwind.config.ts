@@ -10,23 +10,30 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        night: "#07111f",
-        coal: "#0b0d10",
-        champagne: "#d6b777",
-        warm: "#efe2cf",
-        bone: "#f8f4ec",
-        mist: "#b9c4d0"
+        brand: "#E85C8D",
+        pastel: "#FDE8F0",
+        soft: "#FFF5F8",
+        accent: "#C83E6D",
+        dark: "#2D2529",
+        muted: "#6B5A60"
       },
       fontFamily: {
-        serif: ["var(--font-serif)"],
-        sans: ["var(--font-sans)"]
+        display: ["var(--font-display)"],
+        body: ["var(--font-body)"]
+      },
+      borderRadius: {
+        "2xl": "16px",
+        "3xl": "24px",
+        "4xl": "32px",
+        "pill": "50px"
       },
       boxShadow: {
-        premium: "0 24px 80px rgba(0,0,0,0.28)",
-        glow: "0 0 60px rgba(214,183,119,0.18)"
+        spa: "0 10px 30px rgba(232, 92, 141, 0.1)",
+        "spa-lg": "0 20px 60px rgba(232, 92, 141, 0.12)",
+        glow: "0 0 60px rgba(232, 92, 141, 0.15)"
       },
       backgroundImage: {
-        radialLuxury: "radial-gradient(circle at top right, rgba(214,183,119,0.20), transparent 34%), radial-gradient(circle at bottom left, rgba(36,68,104,0.28), transparent 38%)"
+        radialBrand: "radial-gradient(circle at top right, rgba(232, 92, 141, 0.08), transparent 34%), radial-gradient(circle at bottom left, rgba(253, 232, 240, 0.5), transparent 38%)"
       }
     }
   },

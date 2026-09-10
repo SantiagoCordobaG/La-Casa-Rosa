@@ -4,13 +4,13 @@ import { ReactNode } from "react";
 export function ButtonLink({ href, children, variant = "primary" }: { href: string; children: ReactNode; variant?: "primary" | "ghost" }) {
   const classes =
     variant === "primary"
-      ? "bg-champagne text-night hover:bg-bone"
-      : "border border-white/15 bg-white/5 text-bone hover:border-champagne/60 hover:bg-white/10";
+      ? "bg-brand text-white hover:bg-accent"
+      : "border border-brand/20 bg-brand/5 text-dark hover:border-brand hover:bg-brand/10";
 
   return (
     <Link
       href={href}
-      className={`inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-semibold transition duration-300 ${classes}`}
+      className={`inline-flex items-center justify-center rounded-pill px-7 py-3.5 text-sm font-semibold font-body transition duration-300 shadow-spa hover:shadow-spa-lg ${classes}`}
     >
       {children}
     </Link>

@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
-import { ServicesSection } from "@/sections/ServicesSection";
+import { RoomsSection } from "@/sections/RoomsSection";
 
 export const metadata: Metadata = { title: "Servicios" };
 
 export default function ServiciosPage() {
   return (
     <main>
-      <PageHero kicker="Servicios" title="Detalles que elevan cada momento." image="https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=2200&q=90">
-        Amenities esenciales, espacios modernos y atención constante para que la experiencia se sienta fluida desde la llegada.
+      <PageHero kicker="Servicios" title="Todo lo que tus uñas necesitan." image="https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=2200&q=90">
+        Desde manicura clásica hasta nail art personalizado, ofrecemos una variedad de servicios para consentirte.
       </PageHero>
-      <ServicesSection />
+      <RoomsSection />
     </main>
   );
 }
