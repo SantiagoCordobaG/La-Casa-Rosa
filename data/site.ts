@@ -6,7 +6,7 @@ export const siteConfig = {
   url: "https://lacasarosa-spa.vercel.app",
   address: "Cra. 84 #54, Cali, Valle del Cauca",
   phone: "+57 314 674 1901",
-  email: "info@lacasarosaspa.com",
+  email: "lacasarosa@gmail.com",
   socials: ["Instagram", "Facebook", "TikTok"]
 };
 
