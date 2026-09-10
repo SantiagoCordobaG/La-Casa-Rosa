@@ -23,7 +23,7 @@ export function Footer() {
           <h3 className="mb-5 font-body text-sm font-semibold uppercase tracking-[0.24em] text-brand">Contacto</h3>
           <div className="grid gap-4 font-body text-sm text-dark/70">
             <span className="flex gap-3"><Phone size={17} className="text-brand" />{siteConfig.phone}</span>
-            <span className="flex gap-3"><Mail size={17} className="text-brand" />{siteConfig.email}</span>
+            <span className="flex gap-3"><Mail size={17} className="shrink-0 text-brand" /><span className="break-words leading-6">{siteConfig.email}</span></span>
             <span className="flex gap-3"><MapPin size={17} className="text-brand" />{siteConfig.address}</span>
           </div>
         </div>
