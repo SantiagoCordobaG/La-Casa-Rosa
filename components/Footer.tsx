@@ -12,7 +12,7 @@ export function Footer() {
           <p className="mt-6 max-w-sm font-body text-sm leading-7 text-muted">Tu spa de uñas boutique en Cali. Elegancia, cuidado y arte en cada detalle para tus manos y pies.</p>
         </div>
         <div>
-          <h3 className="mb-5 font-body text-sm font-semibold uppercase tracking-[0.24em] text-brand">Links</h3>
+          <h3 className="mb-5 font-body text-sm font-semibold uppercase tracking-[0.24em] text-dark">Links</h3>
           <div className="grid gap-3">
             {navLinks.slice(1).map((link) => (
               <Link key={link.href} href={link.href} className="font-body text-sm text-dark/70 transition hover:text-brand">{link.label}</Link>
@@ -20,15 +20,15 @@ export function Footer() {
           </div>
         </div>
         <div>
-          <h3 className="mb-5 font-body text-sm font-semibold uppercase tracking-[0.24em] text-brand">Contacto</h3>
+          <h3 className="mb-5 font-body text-sm font-semibold uppercase tracking-[0.24em] text-dark">Contacto</h3>
           <div className="grid gap-4 font-body text-sm text-dark/70">
-            <span className="flex gap-3"><Phone size={17} className="text-brand" />{siteConfig.phone}</span>
-            <span className="flex gap-3"><Mail size={14} className="shrink-0 text-brand" /><span className="min-w-0 break-all leading-6">{siteConfig.email}</span></span>
-            <span className="flex gap-3"><MapPin size={25} className="text-brand" />{siteConfig.address}</span>
+            <span className="flex gap-3"><Phone size={17} className="text-accent" />{siteConfig.phone}</span>
+            <span className="flex gap-3"><Mail size={14} className="shrink-0 text-accent" /><span className="min-w-0 break-all leading-6">{siteConfig.email}</span></span>
+            <span className="flex gap-3"><MapPin size={25} className="text-accent" />{siteConfig.address}</span>
           </div>
         </div>
         <div className="col-span-2 lg:col-span-1">
-          <h3 className="mb-5 font-body text-sm font-semibold uppercase tracking-[0.24em] text-brand">Social</h3>
+          <h3 className="mb-5 font-body text-sm font-semibold uppercase tracking-[0.24em] text-dark">Social</h3>
           <div className="flex gap-3">
             {siteConfig.socials.map((item) => (
               <a key={item} href="#" className="grid h-11 w-11 place-items-center rounded-full border border-brand/10 bg-brand/5 transition hover:border-brand hover:text-brand text-dark" aria-label={item}>
@@ -38,7 +38,7 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="premium-container mt-12 border-t border-brand/10 pt-6 font-body text-xs text-dark/45">© 2026 La Casa Rosa - Spa de Uñas. Todos los derechos reservados.</div>
+      <div className="premium-container mt-12 border-t border-brand/10 pt-6 font-body text-xs text-muted">© 2026 La Casa Rosa - Spa de Uñas. Todos los derechos reservados.</div>
     </footer>
   );
 }

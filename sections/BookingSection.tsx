@@ -12,7 +12,7 @@ export function BookingSection() {
             <div className="grid gap-5 lg:grid-cols-[1fr_1fr_1fr_1fr_auto] lg:items-end">
               {fields.map((field, index) => (
                 <label key={field} className="block">
-                  <span className="mb-3 flex items-center gap-2 font-body text-xs font-semibold uppercase tracking-[0.22em] text-brand">
+                  <span className="mb-3 flex items-center gap-2 font-body text-xs font-semibold uppercase tracking-[0.22em] text-accent">
                     {index < 2 ? <CalendarDays size={15} /> : <Users size={15} />} {field}
                   </span>
                   <div className="rounded-2xl border border-brand/10 bg-white px-4 py-4 font-body text-sm text-dark/50">

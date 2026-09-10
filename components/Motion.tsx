@@ -1,44 +1,59 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import { useEffect, useRef, ReactNode } from "react";
 
 export function FadeUp({ children, delay = 0, className = "" }: { children: ReactNode; delay?: number; className?: string }) {
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.style.transitionDelay = `${delay}s`;
+          el.classList.add("animate-visible");
+          observer.unobserve(el);
+        }
+      },
+      { threshold: 0.2 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [delay]);
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 34 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.75, delay, ease: [0.22, 1, 0.36, 1] }}
-      className={className}
-    >
+    <div ref={ref} className={`animate-fadeup ${className}`}>
       {children}
-    </motion.div>
+    </div>
   );
 }
 
 export function Stagger({ children, className = "" }: { children: ReactNode; className?: string }) {
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          Array.from(el.children).forEach((child, i) => {
+            (child as HTMLElement).style.transitionDelay = `${i * 0.11}s`;
+            child.classList.add("animate-visible");
+          });
+          observer.unobserve(el);
+        }
+      },
+      { threshold: 0.18 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
   return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.18 }}
-      variants={{ visible: { transition: { staggerChildren: 0.11 } }, hidden: {} }}
-      className={className}
-    >
+    <div ref={ref} className={className}>
       {children}
-    </motion.div>
+    </div>
   );
 }
 
 export function StaggerItem({ children, className = "" }: { children: ReactNode; className?: string }) {
-  return (
-    <motion.div
-      variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } }}
-      transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
+  return <div className={`stagger-item ${className}`}>{children}</div>;
 }

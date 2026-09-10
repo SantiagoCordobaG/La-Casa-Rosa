@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 export function ButtonLink({ href, children, variant = "primary" }: { href: string; children: ReactNode; variant?: "primary" | "ghost" }) {
   const classes =
     variant === "primary"
-      ? "bg-brand text-white hover:bg-accent"
+      ? "bg-accent text-white hover:bg-brand"
       : "border border-brand/20 bg-brand/5 text-dark hover:border-brand hover:bg-brand/10";
 
   return (

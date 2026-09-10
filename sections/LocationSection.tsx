@@ -17,7 +17,7 @@ export function LocationSection() {
               <div>
                 <h3 className="font-display text-2xl text-dark">Dirección del spa</h3>
                 <p className="mt-2 font-body text-sm leading-7 text-muted">{siteConfig.address}</p>
-                <a href="https://www.google.com/maps/search/?api=1&query=Cl+73+%23+3-76,+Jorge+Eliecer+Gaitan,+Cali,+Valle+del+Cauca" target="_blank" className="mt-5 inline-flex items-center gap-2 font-body text-sm font-semibold text-brand" rel="noreferrer">
+                <a href="https://www.google.com/maps/search/?api=1&query=Cl+73+%23+3-76,+Jorge+Eliecer+Gaitan,+Cali,+Valle+del+Cauca" target="_blank" className="mt-5 inline-flex items-center gap-2 font-body text-sm font-semibold text-accent" rel="noreferrer">
                   Cómo llegar <ArrowUpRight size={16} />
                 </a>
               </div>

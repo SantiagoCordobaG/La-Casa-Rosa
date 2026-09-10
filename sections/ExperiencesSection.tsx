@@ -1,5 +1,6 @@
 import { FadeUp } from "@/components/Motion";
 import { experiences } from "@/data/site";
+import Image from "next/image";
 
 export function ExperiencesSection() {
   return (
@@ -19,7 +20,7 @@ export function ExperiencesSection() {
               </div>
               {experiences.map((item) => (
                 <div key={item.title} className="relative h-[400px] w-[72vw] shrink-0 border-r border-brand/10 last:border-r-0 sm:w-[52vw] md:h-full md:w-auto md:min-w-0">
-                  <img src={item.image} alt={item.title} className="h-full w-full object-cover" />
+                  <Image src={item.image} alt={item.title} fill sizes="(max-width: 640px) 72vw, (max-width: 768px) 52vw, 25vw" className="object-cover" />
                 </div>
               ))}
             </div>

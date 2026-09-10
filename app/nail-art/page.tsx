@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
 import { ExperiencesSection } from "@/sections/ExperiencesSection";
 import { gallery } from "@/data/site";
@@ -15,7 +16,9 @@ export default function NailArtPage() {
       <section id="galeria" className="bg-pastel py-24">
         <div className="premium-container columns-1 gap-6 sm:columns-2 lg:columns-3">
           {gallery.map((image, index) => (
-            <img key={image} src={image} alt={`Nail Art La Casa Rosa ${index + 1}`} className="mb-6 w-full break-inside-avoid rounded-3xl border border-brand/10 object-cover shadow-spa" />
+            <div key={image} className="mb-6 break-inside-avoid">
+              <Image src={image} alt={`Nail Art La Casa Rosa ${index + 1}`} width={600} height={400} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="w-full rounded-3xl border border-brand/10 object-cover shadow-spa" />
+            </div>
           ))}
         </div>
       </section>

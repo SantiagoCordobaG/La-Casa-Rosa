@@ -1,9 +1,10 @@
 import { ReactNode } from "react";
+import Image from "next/image";
 
 export function PageHero({ kicker, title, children, image }: { kicker: string; title: string; children: ReactNode; image: string }) {
   return (
     <section className="relative min-h-[58vh] overflow-hidden bg-dark pt-32">
-      <img src={image} alt="" className="absolute inset-0 h-full w-full object-cover" />
+      <Image src={image} alt="" fill priority sizes="100vw" quality={80} className="object-cover" />
       <div className="absolute inset-0 bg-gradient-to-b from-dark/50 via-dark/55 to-dark" />
       <div className="premium-container relative z-10 flex min-h-[42vh] items-end pb-16">
         <div className="max-w-4xl">

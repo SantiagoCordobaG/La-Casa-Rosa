@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
 import { BookingSection } from "@/sections/BookingSection";
 import { services } from "@/data/site";
@@ -16,9 +17,11 @@ export default function ReservasPage() {
         <div className="premium-container grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {services.map((service) => (
             <div key={service.slug} className="rounded-3xl border border-brand/10 bg-white p-5 shadow-spa">
-              <img src={service.image} alt={service.title} className="h-48 w-full rounded-2xl object-cover" />
+              <div className="relative h-48 w-full overflow-hidden rounded-2xl">
+                <Image src={service.image} alt={service.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw" className="object-cover" />
+              </div>
               <h2 className="mt-5 font-display text-3xl text-dark">{service.title}</h2>
-              <p className="mt-2 font-body text-sm text-brand">{service.price}</p>
+              <p className="mt-2 font-body text-sm text-accent">{service.price}</p>
             </div>
           ))}
         </div>
