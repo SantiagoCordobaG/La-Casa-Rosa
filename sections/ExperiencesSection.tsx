@@ -4,7 +4,7 @@ import { experiences } from "@/data/site";
 export function ExperiencesSection() {
   return (
     <section id="experiencias" className="bg-soft py-24 sm:py-32">
-      <div className="relative left-1/2 w-screen -translate-x-1/2">
+      <div className="relative">
         <FadeUp>
           <div className="overflow-x-auto overflow-y-hidden rounded-none border-y border-brand/10 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:overflow-hidden">
             <div className="flex min-h-[400px] min-w-max md:grid md:h-[520px] md:min-w-0 md:grid-cols-[minmax(320px,30vw)_repeat(4,minmax(0,1fr))]">
